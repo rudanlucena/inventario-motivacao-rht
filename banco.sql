@@ -34,5 +34,5 @@ create table respostas_funcionario(
 	FOREIGN KEY (id_questionario) REFERENCES questionario(id)
                     ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_funcionario) REFERENCES funcionario(id)
-                    ON DELETE CASCADE ON UPDATE CASCADE,                
-)
+                    ON DELETE CASCADE ON UPDATE CASCADE                
+);
