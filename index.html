@@ -4,6 +4,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+  });
+    </script>
 </head>
 
 <body>
@@ -13,15 +21,24 @@
         <div class="row">
           <div align="right"><a  href="adm.html"><i class="material-icons" style="color: red;">account_box</i></a></div>
           <form class="col s12" action="verifica_usuario.php" method="post">
+            <!--<div class="row">
+              <div class="input-field col s12">
+                <select>
+                  <option value="1" selected>Funcionario</option>
+                  <option value="2">Administrador</option>
+                </select>
+                <label>Usuario</label>
+              </div>
+            </div>-->
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" name="login" class="validate">
+                <input id="email" type="text" name="login" class="validate" required>
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" name="senha" class="validate">
+                <input id="password" type="password" name="senha" class="validate" required>
                 <label for="password">Password</label>
               </div>
             </div>
@@ -35,7 +52,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
   <script type="text/javascript" src="js/Chart.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

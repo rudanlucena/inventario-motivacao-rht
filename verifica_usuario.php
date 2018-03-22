@@ -22,7 +22,14 @@
                                             if(mysqli_affected_rows($db) == 1){ 
                                                 $_SESSION['login'] = $login;
                                                 $_SESSION['senha'] = $senha;
-                                                //Header("location:../partida/listar_rodadas.php");  
+                                                //Header("location:../partida/listar_rodadas.php");
+                                                if($login == "admin")
+                                                    echo "<script>location.href='grafico-geral.php';</script>";
+
+                                                $result = mysqli_query($db, "SELECT * FROM questionario where login='$login'");
+                                                if(mysqli_affected_rows($db) == 1)  
+                                                    echo "<script>location.href='questionario_computado.html';</script>";                                                                
+
                                                 echo "<script>location.href='questionario.html';</script>";                                                             
                                             }
                                             else{

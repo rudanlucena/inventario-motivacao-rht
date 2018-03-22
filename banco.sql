@@ -1,5 +1,15 @@
+create table funcionario(
+	login varchar(25) not null unique,
+	senha varchar(25) not null
+);
+
+create table administrador(
+	login varchar(25) not null unique,
+	senha varchar(25) not null
+);
+
 create table questionario(
-	id int auto_increment primary key,
+	login varchar(25) not null unique,
 	q1 int not null,
 	q2 int not null,
 	q3 int not null,
@@ -19,20 +29,18 @@ create table questionario(
 	q17 int not null,
 	q18 int not null,
 	q19 int not null,
-	q20 int not null
+	q20 int not null,
+	FOREIGN KEY (login) REFERENCES funcionario(login)
+                    ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-create table funcionario(
-	id int auto_increment primary key,
-	login varchar(25) not null unique,
-	senha varchar(25) not null
-);
 
-create table respostas_funcionario(
+
+/*create table respostas_funcionario(
 	id_questionario int, 
 	id_funcionario int,
 	FOREIGN KEY (id_questionario) REFERENCES questionario(id)
                     ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (id_funcionario) REFERENCES funcionario(id)
                     ON DELETE CASCADE ON UPDATE CASCADE                
-);
+);*/
