@@ -1,4 +1,14 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+	<?php
 
 	session_start();
 	if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
@@ -37,13 +47,13 @@
                          
     $result = mysqli_query( $db, $sql);
     if(!$result){?>
-        <div class="alert alert-danger">
+        <div class="alert alert-danger"><br><br><br>
             <strong>Error!</strong> não foi possivel registrar suas respostas
             <a href="questionario.html"><button type="button" class="btn btn-danger">ok</button>
         </div><?php
     }
    else{?>              
-        <div class="alert alert-success">
+        <div class="alert alert-success"><br><br><br>
               <strong>Success!</strong> Obrigado pela participação.
               <a href="grafico-individual.php">
               <button type="button" class="btn btn-primary">ok</button>
@@ -51,3 +61,7 @@
    }
 
 ?>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
