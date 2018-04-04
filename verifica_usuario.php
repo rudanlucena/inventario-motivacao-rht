@@ -25,7 +25,7 @@
 
     $result = mysqli_query($db, "SELECT * FROM questionario where login='$login'");
     if(mysqli_affected_rows($db) == 1)  
-        echo "<script>location.href='questionario_computado.html';</script>";                                                                
+        echo "<script>location.href='grafico-individual.php';</script>";                                                                
 
     echo "<script>location.href='questionario.html';</script>";                                                             
 }

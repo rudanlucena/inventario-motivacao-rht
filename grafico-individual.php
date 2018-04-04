@@ -33,8 +33,6 @@
 		<?php         
        }
    	   $respostas->free(); 
-	}else{
-	  echo "<h4 class='sem_registros'>NÂO HA RODADAS REGISTRADAS!</h4>";
 	}
 ?>
 
